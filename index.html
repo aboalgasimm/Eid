@@ -87,14 +87,10 @@
         }
         
         .card-preview {
-            width: 100%;
-            max-width: 600px;
-            aspect-ratio: 16/9;
-            position: relative;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        }
+    border: 5px solid var(--eid-secondary); /* Adds a golden border */
+    border-radius: 15px; /* Keeps the rounded corners */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
+}
         
         .greeting-card {
     position: relative; /* Ensures child elements with absolute positioning are relative to this container */
@@ -115,6 +111,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    
     
     background-size: contain; /* Ensures the entire image is visible */
     background-position: center; /* Centers the image */
@@ -148,10 +145,17 @@
         }
         
         .star {
-            position: absolute;
-            background-color: var(--eid-secondary);
-            clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-        }
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.5;
+    }
+    to {
+        opacity: 1;
+    }
+}
         
         .star:nth-child(1) {
             top: 20%;
@@ -256,8 +260,8 @@
         .eid-message {
             font-size: 1.2rem;
             max-width: 80%;
-            margin-bottom: 0.1rem;
-            margin-top: -0.9rem;
+            margin-bottom: 0.2rem;
+            margin-top: -0.9-rem;
         }
         .from-name {
     position: relative; /* Positions it relative to the .greeting-card */
@@ -391,9 +395,8 @@
                     <div class="card-bg"></div>
                     <div class="card-decoration">
                         
-                        
-                       
-                       
+                        <div class="star"></div>
+                        <div class="lantern"></div>
                     </div>
                     <div class="card-content">
                         <div class="eid-arabic">نـادي الحاسـب يهنئـكم بحلول عيـد الفطر</div>
