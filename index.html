@@ -85,12 +85,17 @@
             align-items: center;
             gap: 2rem;
         }
+   .card-preview {
+            border: 5px solid var(--eid-secondary);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
         
-        .card-preview {
-    border: 5px solid var(--eid-secondary); /* Adds a golden border */
-    border-radius: 15px; /* Keeps the rounded corners */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Adds a shadow for depth */
-}
+        .card-preview:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        }
         
         .greeting-card {
     position: relative; /* Ensures child elements with absolute positioning are relative to this container */
