@@ -85,7 +85,9 @@
             align-items: center;
             gap: 2rem;
         }
-   .card-preview {
+        
+           
+        .card-preview {
             border: 5px solid var(--eid-secondary);
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
@@ -110,28 +112,18 @@
     padding: 2rem;
     text-align: center;
 }
-        .card-bg {
+.card-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    
-    
-    background-size: contain; /* Ensures the entire image is visible */
+    background-image: url("WhatsApp Image 2025-03-30 at 00.13.29_15eb00be.jpg");
+    background-size: cover; /* Ensures the image covers the entire area */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents tiling */
-    opacity: 0.7.5; /* Adjust transparency if needed */
-}
-
-/* Media query for smaller screens */
-@media (max-width: 768px) {
-    .card-bg {
-        background-size: contain; /* Ensures the entire image is visible */
-        background-position: top; /* Adjusts the position for better visibility */
-    }
-}
-        
+     /* Adjust transparency if needed */
+}    
         .card-decoration {
             position: absolute;
             width: 100%;
@@ -398,6 +390,7 @@
             <div class="card-preview">
                 <div class="greeting-card" id="greetingCard">
                     <div class="card-bg"></div>
+                    <img src="WhatsApp Image 2025-03-30 at 00.39.24_92266edf.jpg"  class="card-bg">
                     <div class="card-decoration">
                         
                         <div class="star"></div>
